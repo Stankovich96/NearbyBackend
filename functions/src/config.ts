@@ -1,4 +1,4 @@
-import functions from "firebase-functions";
+import * as functions from "firebase-functions";
 import firebase from "firebase";
 import "firebase/firestore";
 import * as admin from "firebase-admin";
