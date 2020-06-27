@@ -1,3 +1,4 @@
+import * as functions from "firebase-functions";
 import * as firebase from "firebase";
 import "firebase/firestore";
 import * as admin from "firebase-admin";
@@ -34,4 +35,4 @@ firebase.initializeApp(firebaseConfiguration);
 
 const db = admin.firestore();
 
-export { firebase, admin, db };
+export { firebase, admin, db, functions };

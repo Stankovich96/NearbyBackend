@@ -1,4 +1,4 @@
-import functions from "firebase-functions";
+import { functions } from "./config";
 import cors from "cors";
 // import axios from "axios";
 import express from "express";
