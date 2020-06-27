@@ -1,5 +1,5 @@
-import * as functions from "firebase-functions";
-import * as firebase from "firebase";
+import functions from "firebase-functions";
+import firebase from "firebase";
 import "firebase/firestore";
 import * as admin from "firebase-admin";
 // Your web app's Firebase configuration
