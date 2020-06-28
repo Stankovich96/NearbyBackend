@@ -1,6 +1,6 @@
-import { ApolloServer } from "apollo-server-express";
-import resolvers from "./resolver";
-import typeDefs from "./typeDefs";
+import { ApolloServer } from 'apollo-server-express';
+import resolvers from './resolver';
+import typeDefs from './typeDefs';
 
 const main = (app: any) => {
 	const server = new ApolloServer({
@@ -13,7 +13,7 @@ const main = (app: any) => {
 	server.applyMiddleware({
 		app,
 		cors: true,
-		path: "/",
+		path: '/',
 	});
 	return app;
 };

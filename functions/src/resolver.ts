@@ -1,19 +1,19 @@
-import { db } from "./config";
+import { db } from './config';
 
 const resolvers = {
 	Query: {
-		searchHistory: () => async (_: any, context: any) => {
-			const { userId } = context;
+		searchHistory: async (_: any, args: any) => {
+			const { userId } = args;
 			try {
 				const firebaseSearches = await db
-					.collection("searches")
-					.where("userId", "==", userId)
-					.orderBy("createdAt", "desc")
+					.collection('searches')
+					.where('userId', '==', userId)
+					.orderBy('createdAt', 'desc')
 					.get();
 
-				return firebaseSearches.docs.map((res) => ({
-					id: res.id,
-					...res.data(),
+				return firebaseSearches.docs.map((doc) => ({
+					id: doc.id,
+					...doc.data(),
 				}));
 			} catch (error) {
 				throw new Error(error);
